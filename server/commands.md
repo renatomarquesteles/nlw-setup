@@ -34,3 +34,15 @@ Opens database interface on the browser
 `npm i @fastify/cors`
 Installs CORS library to enable front-end connections to our server
 
+`npm i -D prisma-erd-generator @mermaid-js/mermaid-cli`
+`npx prisma generate`
+Creates a visual representation of the database at prisma/ERD.svg
+
+`npx prisma db seed`
+Runs the prisma/seed.ts file to populate the database
+
+`npm i zod`
+Installs zod for data validations
+
+`npm i dayjs`
+Installs dayjs to handle Date values
