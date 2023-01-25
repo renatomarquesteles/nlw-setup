@@ -15,4 +15,9 @@ Installs Tailwind CSS
 `npx tailwindcss init -p`
 Initializes Tailwind CSS with PostCSS configuration file
 
+`npm i phosphor-react`
+Installs Phosphor Icons
+
+`npm i dayjs`
+Installs dayjs to handle Date values
 
