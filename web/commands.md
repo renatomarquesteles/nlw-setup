@@ -21,3 +21,11 @@ Installs Phosphor Icons
 `npm i dayjs`
 Installs dayjs to handle Date values
 
+`npm i @radix-ui/react-dialog`
+Installs the Radix dialog component to handle modals
+
+`npm i @radix-ui/react-popover`
+Installs the Radix popover component
+
+`npm i clsx`
+Installs clsx to handle conditional style classes
