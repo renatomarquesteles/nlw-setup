@@ -29,3 +29,6 @@ Installs the Radix popover component
 
 `npm i clsx`
 Installs clsx to handle conditional style classes
+
+`npm i @radix-ui/react-checkbox`
+Installs the Radix checkbox component
