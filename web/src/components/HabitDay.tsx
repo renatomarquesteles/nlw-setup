@@ -4,14 +4,24 @@ import clsx from 'clsx';
 
 import { ProgressBar } from './ProgressBar';
 import { Check } from 'phosphor-react';
+import dayjs from 'dayjs';
 
 interface HabitDayProps {
-  completed: number;
-  amount: number;
+  date: Date;
+  completed?: number;
+  amount?: number;
 }
 
-export const HabitDay = ({ completed, amount }: HabitDayProps) => {
-  const completedPercentage = Math.round((completed / amount) * 100);
+export const HabitDay = ({
+  completed = 0,
+  amount = 0,
+  date,
+}: HabitDayProps) => {
+  const completedPercentage =
+    amount > 0 ? Math.round((completed / amount) * 100) : 0;
+
+  const dayAndMonth = dayjs(date).format('MM-DD');
+  const dayOfWeek = dayjs(date).format('dddd');
 
   return (
     <Popover.Root>
@@ -32,9 +42,9 @@ export const HabitDay = ({ completed, amount }: HabitDayProps) => {
 
       <Popover.Portal>
         <Popover.Content className="min-w-[320px] p-6 rounded-2xl bg-zinc-900 flex flex-col">
-          <span className="font-semibold text-zinc-400">monday</span>
+          <span className="font-semibold text-zinc-400">{dayOfWeek}</span>
           <span className="mt-1 font-extrabold leading-tight text-3xl">
-            02-15
+            {dayAndMonth}
           </span>
 
           <ProgressBar progress={completedPercentage} />

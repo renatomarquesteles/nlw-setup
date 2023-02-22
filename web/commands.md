@@ -32,3 +32,6 @@ Installs clsx to handle conditional style classes
 
 `npm i @radix-ui/react-checkbox`
 Installs the Radix checkbox component
+
+`npm i axios`
+Installs axios to handle HTTPS requests
